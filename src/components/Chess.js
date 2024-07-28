@@ -3,6 +3,7 @@ import "./Chess.css";
 import Square from "./Square";
 import Board from "./Board";
 import solvePuzzle from "./Algorithm";
+import headerImage from "../components/coep.png"; // Adjust the path to where you save the image
 
 const Chess = () => {
   const [board, setBoard] = useState([]);
@@ -86,11 +87,12 @@ const Chess = () => {
   return (
     <div className="theme" data-theme={theme}>
       <nav className="navbar navbar-dark">
-        <div className="container-fluid">
-          <span className="navbar-brand mb-0 h1">N-Queen</span>
+        <div className="container-fluid d-flex align-items-center">
+          <img src={headerImage} alt="Header" className="header-image" />
+          <span className="navbar-brand mb-0 h1 ms-3">N-Queens Visualizer</span>
           {/* Toggle theme */}
           <span
-            className="theme-icon text-warning h4 mb-0"
+            className="theme-icon text-warning h4 mb-0 ms-auto"
             onClick={switchTheme}
           >
             {theme === "light" ? (
